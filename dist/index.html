@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../dist/main.css" type="text/css" rel="stylesheet">
+    <title>Bookshop</title>
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+<header class="header">
+    <a class="header__logo" href="">Bookshop</a>
+    <nav class="menu">
+        <a class="menu__item" href="">books</a>
+        <a class="menu__item" href="">audiobooks</a>
+        <a class="menu__item" href="">stationery & gifts</a>
+        <a class="menu__item" href="">blog</a>
+    </nav>
+    <div class="icons">
+        <button class="icons__item"><img src="./images/user.svg" alt="sign in"></button>
+        <button class="icons__item"><img src="./images/search.svg" alt="search"></button>
+        <button class="icons__item icons__item_count">
+            <img src="./images/shop bag.svg" alt="shop bag">
+            <div class="icons__item-counter j-counter"></div>
+        </button>
+    </div>
+</header>
+<main>
+    <section class="slider">
+        <div class="banner j-banner">
+            <a href="">
+                <div class="promo promo_violet">change old book on new
+                <img class="promo__arrow"src="./images/arrow.svg" alt="arrow">
+                </div>
+            </a>
+            <a href="">
+                <div class="promo promo_pink">top 100 books 2022
+                    <img class="promo__arrow" src="./images/arrow.svg" alt="arrow">
+                </div>
+            </a>
+        </div>
+        <div class="dots j-dots"></div>
+    </section>
+    <section class="products">
+        <div class="categories">
+            <ul class="j-categories"></ul>
+        </div>
+        <div class="catalog">
+            <div class="cards j-cards"></div>
+            <div class="more"><button class="more__btn j-moreBtn">Load more</button></div> 
+        </div>
+    </section>
+</main>
+<script src="../dist/main.js" type="text/javascript"></script>
+</body>
+</html>

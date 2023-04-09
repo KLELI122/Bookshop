@@ -1,0 +1,62 @@
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .slider {
+        .promo {
+            &_violet {
+                left: 1002px;
+            }
+
+            &_pink {
+                left: 1024px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .slider {
+
+        .banner {
+            width: 676px;
+            height: 425px;
+        }
+
+        .promo {
+            &_violet {
+                height: 176px;
+                left: 571px;
+                top: 40px;
+                width: 137px;
+            }
+
+            &_pink {
+                height: 171px;
+                left: 601px;
+                top: 236px;
+                width: 121px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slider {
+
+        .banner {
+            width: 338px;
+            height: 212px;
+        }
+
+        .promo {
+            display: none;
+        }
+
+        .dots {
+            margin-bottom: 60px;
+
+            &__item {
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+}

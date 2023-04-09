@@ -1,0 +1,91 @@
+.slider {
+    @keyframes ani {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .banner {
+        position: relative;
+        margin: 0 auto;
+        width: 1120px;
+        height: 702px;
+        margin-bottom: 17px;
+
+        &__item {
+            display: none;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+
+            &_active {
+                display: block;
+                animation: ani 2.5s forwards;
+            }
+        }
+    }
+
+    .dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 105px;
+
+        &__item {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--light_purple-color);
+
+            &_active {
+                display: block;
+                background: var(--purple-color);
+                animation: ani 2.5s forwards;
+            }
+        }
+    }
+
+    .promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 8px;
+        position: absolute;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: var(--black_text-color);
+        font-family: "Montserrat Bold", "Arial", "Helvetica", sans-serif;
+        box-sizing: border-box;
+        box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+        cursor: pointer;
+        z-index: 1;
+
+        &_violet {
+            background-color: var(--purple-color);
+            width: 149px;
+            height: 204px;
+            top: 64px;
+            left: 1057px;
+            padding: 102px 20px 20px;
+        }
+
+        &_pink {
+            background-color: var(--pink-color);
+            width: 137px;
+            height: 273px;
+            top: 344px;
+            left: 1143px;
+            padding: 150px 49px 20px 21px;
+        }
+
+        &__arrow {
+            width: 55px;
+            height: 12px;
+        }
+    }
+}

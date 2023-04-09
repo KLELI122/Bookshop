@@ -1,0 +1,166 @@
+.products {
+
+    @mixin button {
+        width: 176px;
+        height: 45px;
+        background-color: transparent;
+        border: 1px solid var(--btn-color);
+        font-family: "Montserrat Bold", "Arial", "Helvetica", sans-serif;
+        font-size: 8px;
+        line-height: 10px;
+        text-transform: uppercase;
+        color: var(--btn-color);
+        cursor: pointer;
+    }
+
+    display: grid;
+    grid-template-columns: 416px 1024px;
+
+    .categories {
+        background-color: var(--light_purple-color);
+        padding: 45px 0 0 138px;
+        height: 710px;
+        box-sizing: border-box;
+
+        &__item {
+            font-family: "Montserrat Medium", "Arial", "Helvetica", sans-serif;
+            font-size: 12px;
+            line-height: 15px;
+            color: var(--gray_text-color);
+            margin-bottom: 23px;
+            padding-left: 6px;
+
+            &_active,
+            &:hover {
+                font-family: "Montserrat Bold", "Arial", "Helvetica", sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+                color: var(--black_text-color);
+                list-style: disc;
+                cursor: pointer;
+            }
+
+            &::marker {
+                color: var(--dark_purple-color);
+                border-radius: 50%;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .catalog {
+        margin: 46px 0 0 -60px;
+        max-width: 964px;
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 76px;
+            row-gap: 96px;
+            margin-bottom: 96px;
+
+            .card {
+                display: flex;
+                gap: 36px;
+                width: 424px;
+
+                &__img {
+                    width: 212px;
+                    height: 300px;
+                    box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+                }
+
+                .desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &__author {
+                        font-family: "OpenSans Regular", sans-serif;
+                        font-size: 10px;
+                        line-height: 14px;
+                        color: var(--gray_text-color);
+                        margin-bottom: 11px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
+                    &__title {
+                        font-family: "Montserrat Bold", "Arial", "Helvetica", sans-serif;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: var(--black_text-color);
+                        margin-bottom: 9px;
+                    }
+
+                    .rating {
+                        display: flex;
+                        gap: 6px;
+                        margin-bottom: 23px;
+
+                        &__stars {
+                            display: flex;
+                            gap: 1px;
+                        }
+
+                        &__reviews {
+                            font-family: "OpenSans Regular", sans-serif;
+                            font-size: 10px;
+                            line-height: 14px;
+                            color: var(--gray_text-color);
+                        }
+                    }
+
+                    &__text {
+                        font-family: "OpenSans Regular", sans-serif;
+                        font-size: 10px;
+                        line-height: 14px;
+                        text-transform: capitalize;
+                        color: var(--gray_text-color);
+                        margin-bottom: 16px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
+                    &__price {
+                        font-family: "Montserrat Bold", "Arial", "Helvetica", sans-serif;
+                        font-size: 13px;
+                        line-height: 16px;
+                        text-transform: uppercase;
+                        color: var(--black_text-color);
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__btn {
+                    @include button();
+                    padding: 17px 66px;
+
+                    &_pressed {
+                        color: var(--gray_text-color);
+                        border: 1px solid var(--btn_press-color);
+                        padding: 17px 50px 17px 50px;
+                    }
+
+                }
+            }
+        }
+
+        .more {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 96px;
+
+            &__btn {
+                @include button();
+                padding: 17px 60px;
+                display: block;
+
+            }
+        }
+    }
+}
